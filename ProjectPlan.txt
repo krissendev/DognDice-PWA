@@ -1,0 +1,29 @@
+Dogndice
+
+
+
+api
+https://www.youtube.com/watch?v=vCuf62T2snY
+https://vercel.com/dashboard
+https://dogndicepwa.vercel.app/
+https://vercel.com/docs/errors/platform-error-codes#not_found
+https://vercel.com/krissendev/dogndicepwa/6J349gPtJAn2EU9AciqYsysNCb7g
+https://www.youtube.com/watch?v=Gu0t2EW2kfU&list=PLyuRouwmQCjl4iJgjH3i61tkqauM-NTGj&index=2
+
+
+------------------------
+threejs.org/docs
+dog.ceo/dog-api/documentation
+https://dog.ceo/api/breeds/list/all
+https://dog.ceo/api/breeds/image/random
+
+physics: Ammo.js
+
+
+npm init = package.json
+npm install node 
+npm install nodemon -d      //dev dependency
+npm install --save-dev nodemon
+
+main= entry point
+to run application = npx nodemon

@@ -1,0 +1,14 @@
+{
+    "name": "Dogndice PWA",
+    "short_name": "Dogndice",
+    "start_url": ".",
+    "background_color": "#ffffff",
+    "theme_color": "#ffffff",
+    "display":"standalone", 
+    "icons":[
+        {
+            "src":"/img/icon.jpg",
+            "sizes":"144x144"
+        }
+    ]
+}
