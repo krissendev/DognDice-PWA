@@ -1,5 +1,4 @@
 {
-    "vercek": 2,
     "builds": [
         {
             "src":"./src/index.js",
@@ -12,5 +11,4 @@
             "dest": "/"
         }
     ]
-
 }
