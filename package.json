@@ -4,17 +4,18 @@
   "description": "",
   "main": "./src/app.js",
   "scripts": {
-    "dev":"nodemon ./src/app.js",
-    "start":"node ./src/app.js",
-    "postinstall": "mv node_modules/dat.gui /public/lib/dat.gui"
+    "dev": "nodemon ./src/app.js",
+    "start": "node ./src/app.js",
+    "postinstall": "mv node_modules/datgui ./public/lib/datgui"
   },
-  "author": "",
+  "author": "https://github.com/krissendev/",
   "license": "MIT",
   "dependencies": {
     "express": "^4.18.2"
   },
   "devDependencies": {
-    "dat.gui": "https://github.com/dataarts/dat.gui"
+    "nodemon": "^2.0.15",
+    "datgui": "https://github.com/dataarts/dat.gui"
   },
   "engines": {
     "node": ">=14"
