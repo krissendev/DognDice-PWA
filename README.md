@@ -1,5 +1,6 @@
+<img alt="A dog flying in space" width="100%" height="100%" src="https://github.com/krissendev/DognDice-PWA/blob/main/banner.png">
 
-# DognDice - PWA
+<h1 align="center">DognDice - PWA</h1> 
 
 ## Overview
 A rotating dice in the works of becomming a dice rolling game with dog pictures.
@@ -36,17 +37,23 @@ It is also worth noting that the program uses Service Workers.
 <br> 
 This means the program will still be running after program termination since it is stored in browser cache. 
 <br>
+<br>
 Option 1: 
+<br>
 Right Mouse Click Inspect Element.
 Navigate on the top left bar to "Application"/ "Service Workers"
-Press "Unregister"
+Press "Unregister".
+<br>
 It should no longer be stored 
 <br>
 <br>
 or 
 <br>
 <br>
-Option 2: Simply clear your browser cache
+Option 2:
+<br>
+Simply clear your browser cache.
+<br>
 It should no longer be stored 
 
 
