@@ -95,7 +95,7 @@ scene.add(cube1);
 
 //Camera & Light
 var axis  = new THREE.AxesHelper(20);
-const spotLight1 = new THREE.AmbientLight( 0xffffff);
+const spotLight1 = new THREE.AmbientLight( 0x33d4ff);
 spotLight1.intensity = 1;
 scene.add(axis);
 scene.add( spotLight1 );		
