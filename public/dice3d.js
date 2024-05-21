@@ -1,16 +1,16 @@
 "use strict";
-//import{getDog} from '/dog.js';
+import{getDog} from '/dog.js';
 
 
 //Simply to test if fetching from dog.js works
-/* async function testFetch(){
+async function testFetch(){
     try{
     const doggie = await getDog();
     console.log(doggie);
     }catch(error){
         console.log("error with fetching dog.js");
     }
-} */
+}
 
 //getLocalDogImageTest
 async function getImage(){
@@ -52,19 +52,33 @@ document.body.appendChild( renderer.domElement );
 async function assignImage(){
     try {
         const textureLoader = new THREE.TextureLoader();  
+        let testTexture;
+        
+        if(!navigator.onLine){
+            console.log("is offline")
 
+            const blob = await getImage();
+            const textureURL = URL.createObjectURL(blob);
+            console.log(blob);
+            console.log(textureURL);
+            testTexture = textureLoader.load(textureURL);
+        
+        }
+        else if(navigator.onLine){
+            console.log("is online")
 
-    //dog api Cube
-        // const blob = await getDog();
-        // const imageURL = blob.message;
-        // const testTexture = textureLoader.load(imageURL); 
+            //dog api Cube
+            const blob = await getDog();
+            const imageURL = blob.message;
+            testTexture = textureLoader.load(imageURL); 
+        }
+        console.log(testTexture)
         
     //local fetch dog Cube
-      const blob = await getImage();
-        const textureURL = URL.createObjectURL(blob);
-        console.log(blob);
-        console.log(textureURL);
-        const testTexture = textureLoader.load(textureURL);
+        
+        
+        // const textureURL = URL.createObjectURL(blob);
+
 
     //local assign dog Cube
         //const testTexture = textureLoader.load('./testimg.jpg'); 
