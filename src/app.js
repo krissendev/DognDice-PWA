@@ -15,8 +15,6 @@ app.get("/", (req, res) => res.type('html').send(html));
 
 const server = app.listen(port, () => console.log(`Open app by clicking this: http://localhost:${port} `));
 
-server.keepAliveTimeout = 120 * 1000;
-server.headersTimeout = 120 * 1000;
 
 const html = `
 <!DOCTYPE html>
@@ -38,6 +36,7 @@ const html = `
     <script src="dice3d.js" type="module"></script>
     <script src="register-sw.js" type="module"></script>
     <script src="sw.js" type="module"></script>
+    <script>console.log("inline html js")</script>
   </body>
 </html>
 `

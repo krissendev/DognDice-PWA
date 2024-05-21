@@ -2,6 +2,7 @@
 //https://web.dev/install-criteria/
 //https://web.dev/customize-install/
 
+console.log("sw.js")
 //cache items
 const cacheName = 'site-static';
 const assets =[
@@ -15,8 +16,7 @@ const assets =[
     "dog.js",
     "tempshader.js",
     "register-sw.js",
-    "sw.js",
-    "index.html"
+    "sw.js"
 ]
 
 self.addEventListener('install', event => {
