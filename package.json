@@ -2,10 +2,11 @@
   "name": "project_dogndice_pwa_express",
   "version": "1.0.0",
   "description": "<img alt=\"A dog flying in space\" width=\"100%\" height=\"100%\" src=\"https://github.com/krissendev/DognDice-PWA/blob/main/banner.png\">",
+  "type": "module",
   "main": "./src/app.js",
   "scripts": {
-    "dev": "nodemon ./src/app.js",
-    "start": "node ./src/app.js"
+    "dev": "nodemon ./src/app.mjs",
+    "start": "node ./src/app.mjs"
   },
   "author": "https://github.com/krissendev/",
   "license": "MIT",

@@ -1,8 +1,9 @@
 "use strict";
+console.log("is sw.mjs")
 //https://web.dev/install-criteria/
 //https://web.dev/customize-install/
 
-console.log("sw.js")
+//console.log("sw.js")
 //cache items
 const cacheName = 'site-static';
 const assets =[
@@ -10,17 +11,18 @@ const assets =[
     "/img/favicon.ico",
     "/img/testimg.jpg",
     "/img/icon.jpg",
-    "/lib/three/three.js",
+    "/lib/three/three.mjs",
     "manifest.json",
-    "dice3d.js",
-    "dog.js",
-    "tempshader.js",
-    "register-sw.js",
-    "sw.js"
+    "dice3d.mjs",
+    "dog.mjs",
+    "tempshader.mjs",
+    "register-sw.mjs",
+    "sw.mjs"
 ]
 
 self.addEventListener('install', event => {
-    console.log(`<sw> service worker installed! ${event}`); //each time edited
+    //each time edited
+    //console.log(`<sw> service worker installed! ${event}`); 
     self.skipWaiting();                       //force update new service worker
 
     //for the serviceworker to asyn install before terminating
@@ -32,7 +34,7 @@ self.addEventListener('install', event => {
                 assets.map(asset => {
                     return cache.add(asset)
                     .then(() => {
-                        console.log(`Successfully cached ${asset}`);
+                        //console.log(`Successfully cached ${asset}`);
                     })
                     .catch(error => {
                         console.error(`Error caching ${asset}: ${error}`);
@@ -56,12 +58,12 @@ self.addEventListener('install', event => {
 });
 
 self.addEventListener('activate', event =>{
-    console.log(`<sw> service worker activated! ${event}`)
+    //console.log(`<sw> service worker activated! ${event}`)
 })
 
 
 self.addEventListener("fetch", event =>{
-    console.log(`<sw> intercepting fecth for ${event.request.url}`, event)
+    //console.log(`<sw> intercepting fecth for ${event.request.url}`, event)
     event.respondWith(
         caches.match(event.request).then(response =>{
             return response || fetch(event.request);

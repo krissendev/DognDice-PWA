@@ -1,9 +1,9 @@
 "use strict";
-console.log("register-sw.js")
+console.log("is register-sw.mjs")
 if("serviceWorker" in navigator){
-    navigator.serviceWorker.register("sw.js").then(registration =>{
-        console.log("<register-sw> Running")
-        console.log(registration)
+    navigator.serviceWorker.register("sw.mjs").then(registration =>{
+        //console.log("<register-sw> Running")
+        //console.log(registration)
     }).catch(error =>{
         console.error("<register-sw> Serviceworker error")
         console.log(error)

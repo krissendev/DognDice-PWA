@@ -1,6 +1,6 @@
 "use strict";
-import{getDog} from '/dog.js';
-
+import{getDog} from '/dog.mjs';
+import * as THREE from '/lib/three/three.mjs';
 
 //Simply to test if fetching from dog.js works
 async function testFetch(){
@@ -59,8 +59,8 @@ async function assignImage(){
 
             const blob = await getImage();
             const textureURL = URL.createObjectURL(blob);
-            console.log(blob);
-            console.log(textureURL);
+            //console.log(blob);
+            //console.log(textureURL);
             testTexture = textureLoader.load(textureURL);
         
         }
@@ -72,18 +72,8 @@ async function assignImage(){
             const imageURL = blob.message;
             testTexture = textureLoader.load(imageURL); 
         }
-        console.log(testTexture)
+        //console.log(testTexture)
         
-    //local fetch dog Cube
-        
-        
-        // const textureURL = URL.createObjectURL(blob);
-
-
-    //local assign dog Cube
-        //const testTexture = textureLoader.load('./testimg.jpg'); 
-
-
         const testmaterial = new THREE.MeshStandardMaterial({
             map: testTexture
         });

@@ -10,25 +10,16 @@ function getDog(){
         
         request.addEventListener('load', function (){
             const data = JSON.parse(request.responseText);
-            console.log(data);
+            //console.log(data);
 
             resolve(data);
         });
         request.addEventListener('error', function(){
-            reject(new Error('Error fetching dog from api to dog.js'))
+            reject(new Error('Error fetching dog from api to dog.mjs'))
         })
         request.send();
     });
 }
-
-//const getHtml = document.querySelector('.htmlElement') 
-
-//Html Setup
-/* const testImg = document.querySelector("#dogimg");
-
-console.log(testImg.src); */
-//Fetch
-
 
 export{getDog}
 
