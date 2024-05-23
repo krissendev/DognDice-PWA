@@ -9,10 +9,16 @@ import path from "path";
 import { fileURLToPath } from 'node:url';
 const __dirname = fileURLToPath(import.meta.url);
 
+
+
 //debug
 // import fs from 'fs';
 
 const app =  express();
+
+//ammo
+express.static.mime.define({'application/wasm': ['wasm']});
+
 const publicPath = path.join(__dirname, '..','..', 'public');
 
 
@@ -51,6 +57,9 @@ const html = `
       Hello from Render!
     </section>
     <script src="lib/three/three.mjs" type="module"></script>
+
+    <script src="lib/ammo/ammo.wasm.js"></script>
+
 
     <!--<script src="dog.mjs" type="module"></script>-->
     <!--<script src="dice3d.mjs" type="module"></script>-->

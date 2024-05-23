@@ -1,6 +1,13 @@
 "use strict";
 import{getDog} from '/dog.mjs';
 import * as THREE from '/lib/three/three.mjs';
+// import * as Ammo from '/lib/ammo/ammo.js';
+
+Ammo().then(function(AmmoLib) {
+    console.log("Ammo loaded", AmmoLib);
+});
+
+console.log(THREE)
 
 //Simply to test if fetching from dog.js works
 async function testFetch(){
